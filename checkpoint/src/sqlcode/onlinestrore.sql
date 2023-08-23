@@ -2,7 +2,7 @@ CREATE schema onlinestore;
 
 CREATE table products(
 product_id int not null auto_increment,
-product_name varchar(255)
+product_name varchar(255),
 primary key(product_id)
 );
 
@@ -16,6 +16,7 @@ primary key(customer_id)
 
 CREATE table Orders(
 order_id int not null auto_increment,
-order_name varchar(255)
-primary key(order_id)
+order_name varchar(255),
+primary key(order_id),
+foreign key(customer_id)
 );
