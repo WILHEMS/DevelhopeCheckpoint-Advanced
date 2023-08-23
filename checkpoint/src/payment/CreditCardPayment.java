@@ -31,11 +31,13 @@ public class CreditCardPayment implements PaymentProcessor{
     public double transactionAmount;
     @Override
     public void processPayment() {
-
+        this.transactionId = String.valueOf(0);
+        accountBalance = accountBalance - transactionAmount;
     }
 
     @Override
     public void refundPayment() {
-
+        this.transactionId = String.valueOf(0);
+        accountBalance = accountBalance + transactionAmount;
     }
 }
