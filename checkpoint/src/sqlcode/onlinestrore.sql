@@ -16,7 +16,10 @@ primary key(customer_id)
 
 CREATE table Orders(
 order_id int not null auto_increment,
+customer_id int not null,
+product_id int not null,
 order_name varchar(255),
 primary key(order_id),
+foreign key(customer_id),
 foreign key(customer_id)
 );
